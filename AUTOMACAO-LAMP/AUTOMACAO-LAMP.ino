@@ -1,5 +1,6 @@
+//lampada com sensor HC-SR04 E RELE JQC3F-05VDC-C 
+
 #define Rele 3
-#define luz A0
 #define cm 60
 #define pinEcho 7
 #define pinTrig 6
@@ -10,7 +11,6 @@ float distancia_cm;
 
 void setup() {
   pinMode(Rele, OUTPUT);
-  //Rele6.set(120000);
   pinMode(pinTrig, OUTPUT);
   pinMode(pinEcho, INPUT);
   Serial.begin(9600);
@@ -33,7 +33,7 @@ void loop() {
     digitalWrite(Rele, LOW);
   } else {
     digitalWrite(Rele, HIGH);
-    delay(600);
+    delay(60000);
   }
 
   Serial.print("distancia cm");
